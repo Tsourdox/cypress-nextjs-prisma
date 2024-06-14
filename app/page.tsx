@@ -5,7 +5,7 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col items-center justify-between p-4">
-      <h1 className="text-2xl font-bold text-gray-700 mb-8">
+      <h1 className="text-2xl font-bold text-gray-700 mb-8" data-cy="title">
         Welcome to my Blog
       </h1>
 

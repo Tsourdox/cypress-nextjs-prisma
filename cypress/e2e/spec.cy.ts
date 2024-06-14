@@ -5,7 +5,6 @@ describe("template spec", () => {
 
   it("removes that post", () => {
     cy.visit("/");
-    cy.get("h1").contains("Welcome to my Blog").should("be.visible");
-    // TAR BORT DEN SKAPADE POSTEN ID:5
+    cy.getById("title").contains("Welcome to my Blog").should("be.visible");
   });
 });
