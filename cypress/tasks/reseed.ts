@@ -2,7 +2,9 @@ import { db } from "../../prisma/db";
 
 export async function reseed() {
   // NEVER ALLOW THIS OUTSIDE THE TEST ENVIRONMENT!!!
-  if (process.env.NODE_ENV !== "test") return;
+  if (process.env.NODE_ENV !== "test") {
+    throw new Error("Cannot reseed outside the test environment");
+  }
 
   // ============= RESET ============= //
   await db.post.deleteMany({});
