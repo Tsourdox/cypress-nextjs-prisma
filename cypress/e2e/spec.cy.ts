@@ -1,10 +1,11 @@
 describe("template spec", () => {
   beforeEach(() => {
-    cy.exec("npm run reset && npm run seed");
+    cy.task("reseed");
   });
 
-  it("passes", () => {
+  it("removes that post", () => {
     cy.visit("/");
     cy.get("h1").contains("Welcome to my Blog").should("be.visible");
+    // TAR BORT DEN SKAPADE POSTEN ID:5
   });
 });
