@@ -1,4 +1,5 @@
 import { db } from "@/prisma/db";
+import RandomValue from "./RandomValue";
 
 export default async function Home() {
   const posts = await db.post.findMany({});
@@ -8,6 +9,8 @@ export default async function Home() {
       <h1 className="text-2xl font-bold text-gray-700 mb-8" data-cy="title">
         Welcome to my Blog
       </h1>
+
+      <RandomValue />
 
       {posts.map((post) => (
         <div key={post.id}>
