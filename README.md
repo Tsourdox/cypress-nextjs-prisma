@@ -14,3 +14,7 @@ För att starta applikationen kan du kalla på `npm run dev`
 
 Skapa testdatabasen genom att köra `npm run test:push`
 Därefter är det bar att stata testmiljön med `npm test`
+
+## Länkar
+
+[Cypress](https://docs.cypress.io/)
