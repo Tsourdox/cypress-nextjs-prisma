@@ -20,3 +20,5 @@ jobs:
       - run: npm ci
       - run: npm run push
       - run: npm run build
+      - run: npm run test:push
+      - run: npm run test:run
